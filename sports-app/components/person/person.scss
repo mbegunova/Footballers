@@ -1,7 +1,6 @@
 .person {
   width: 800px;
-  height: 850px;
-  background-color: rgb(243, 246, 247);
+  height: 900px;
   display: flex;
   flex-direction: column;
   top: auto;
@@ -76,13 +75,13 @@
     color: rgb(45, 44, 139);
     display: inline-block;
     flex-direction: row;
-    font-size: 75px;
+    font-size: 65px;
     font-weight: 800;
     height: 287px;
     justify-content: flex-start;
     line-height: 85px;
     margin: 0;
-    padding-top: 100px;
+    padding-top: 50px;
     opacity: 1;
     pointer-events: auto;
     text-transform: uppercase;

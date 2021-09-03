@@ -1,12 +1,12 @@
 export const person = {
-    'name': {
+    name: {
         'person-name': "Андрей Шевченко",
     },
-    'country-info': {
+    countryInfo: {
         flag: "/images/Украина.png",
         country: "Украина, 2006",
     },
-    'price': {
+    price: {
         currency: "€",
         number: 51,
         value: "млн"
@@ -16,66 +16,66 @@ export const person = {
 
 export const persons = [
     {
-        'name': {
+        name: {
             'person-name': "Андрей Шевченко",
         },
-        'country-info': {
+        countryInfo: {
             flag: "/images/Украина.png",
             country: "Украина, 2006",
         },
-        'price': {
+        price: {
             currency: "€",
             number: 51,
             value: "млн"
         },
     },
     {
-        'name': {
+        name: {
             'person-name': "Килиан Мбаппе",
         },
-        'country-info': {
+        countryInfo: {
             flag: "/images/Франция.png",
             country: "Франция, 2021",
         },
-        'price': {
+        price: {
             currency: "€",
             number: 160,
             value: "млн"
         },
     },
     {
-        'name': {
+        name: {
             'person-name': "Джейдон Санчо",
         },
-        'country-info': {
+        countryInfo: {
             flag: "/images/Англия.png",
             country: "Англия, 2021",
         },
-        'price': {
+        price: {
             currency: "€",
             number: 100,
             value: "млн"
         },
     },
     {
-        'name': {
+        name: {
             'person-name': "Бруну Фернандеш",
         },
-        'country-info': {
+        countryInfo: {
             flag: "/images/Португалия.png",
             country: "Португалия, 2021",
         },
-        'price': {
+        price: {
             currency: "€",
             number: 90,
             value: "млн"
         },
     },
     {
-        'name': {
+        name: {
             'person-name': "Джек Грилиш",
         },
-        'country-info': {
+        countryInfo: {
             flag: "/images/Англия.png",
             country: "Англия, 2021",
         },
@@ -86,42 +86,42 @@ export const persons = [
         },
     },
     {
-        'name': {
+        name: {
             'person-name': "Флориан Вирц",
         },
-        'country-info': {
+        countryInfo: {
             flag: "/images/Германия.png",
             country: "Германия, 2021",
         },
-        'price': {
+        price: {
             currency: "€",
             number: 45,
             value: "млн"
         },
     },
     {
-        'name': {
+        name: {
             'person-name': "Ваут Вегхорст",
         },
-        'country-info': {
+        countryInfo: {
             flag: "/images/Нидерланды.png",
             country: "Нидерланды, 2021",
         },
-        'price': {
+        price: {
             currency: "€",
             number: 30,
             value: "млн"
         },
     },
     {
-        'name': {
+        name: {
             'person-name': "Пётр Зелиньский",
         },
-        'country-info': {
+        countryInfo: {
             flag: "/images/Польша.png",
             country: "Польша, 2021",
         },
-        'price': {
+        price: {
             currency: "€",
             number: 50,
             value: "млн"

@@ -2,7 +2,7 @@
   background-color: rgb(243, 246, 247);
   color: rgb(0, 0, 0);
   width: 1600px;
-  height: 850px;
+  height: 900px;
   font-family: Arial Narrow, sans-serif;
   font-size: 0;
   line-height: 0;
@@ -10,23 +10,29 @@
   white-space: nowrap;
 
   &__person {
+    &_red{
+      background-color: #c70000;
+    }
+    &_green{
+      background-color: #02ac02;
+    }
+    &_none{
+      background-color: rgb(25, 192, 245);
+    }
+
     &_left {
+      background-color: rgb(243, 246, 247);
       position: absolute;
       left: 0;
-      background-color: rgb(243, 246, 247);
       border-left-color: rgb(0, 0, 0);
       border-left-style: none;
       border-left-width: 0;
       vertical-align: top;
 
-      .person__question {
-        display: none;
-      }
     }
 
     &_right {
       left: 800px;
-      background-color: rgb(25, 192, 245);
       vertical-align: top;
       width: 800px;
 
@@ -48,10 +54,10 @@
         pointer-events: none;
       }
     }
+
   }
 
   &__controls {
     margin-left: 850px;
   }
-
 }

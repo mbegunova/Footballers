@@ -47,3 +47,8 @@ export const counterObject = {
         value: "0",
     }
 }
+
+export const resultObject = {
+    count: 0,
+    tries: 5,
+}
