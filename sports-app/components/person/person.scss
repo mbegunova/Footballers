@@ -1,24 +1,111 @@
-.person{
+.person {
   width: 800px;
-  height: 900px;
-  background-color: rgb(25, 192, 245);
+  height: 850px;
+  background-color: rgb(243, 246, 247);
+  display: flex;
+  flex-direction: column;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  vertical-align: top;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  font-family: Arial Narrow, sans-serif;
+  font-size: 0;
+  padding: 46px 56px 0 56px;
+  font-weight: 800;
 
-  &__name{
+
+  &__person-name {
+    display: block;
+    font-size: 93.0264px;
+    height: 166px;
+    letter-spacing: -0.27224px;
+    line-height: 83.3984px;
+    margin: 0;
+    text-transform: uppercase;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+  }
+
+  &__lastName, &__firstName {
+    font-size: 130.67px;
+    height: 236px;
+    letter-spacing: -0.45543px;
+    line-height: 118.421px;
+    margin: 0 0 12.9265px;
+  }
+
+  &__country-info {
+    font-weight: 500;
+    display: block;
+    font-size: 0;
+    height: 50px;
+    line-height: 0;
+    margin: 0 0 -28.8707px;
+    white-space: normal;
+  }
+
+  &__flag {
+    border-style: none;
+    display: inline-block;
+    font-size: 0;
+    height: 32.0625px;
+    line-height: 0;
+    margin: 0 16.0356px 0 0;
+    vertical-align: middle;
+    width: 32.0625px;
+  }
+
+  &__country {
+    display: inline-block;
+    font-size: 38.1108px;
+    height: 40px;
+    line-height: 40.8337px;
+    vertical-align: middle;
+    white-space: normal;
 
   }
-  &__lastName{
 
+  &__price {
+    align-items: center;
+    box-sizing: border-box;
+    color: rgb(45, 44, 139);
+    display: inline-block;
+    flex-direction: row;
+    font-size: 75px;
+    font-weight: 800;
+    height: 287px;
+    justify-content: flex-start;
+    line-height: 85px;
+    margin: 0;
+    padding-top: 100px;
+    opacity: 1;
+    pointer-events: auto;
+    text-transform: uppercase;
+    vertical-align: middle;
   }
 
-  &__firstName{
 
+  &__currency{
+    padding: 30% 0 30% 0;
+    color: #19c0f5;
+    display: inline-block;
+    vertical-align: middle;
   }
-
-  &__country-info{
-
+  &__number{
+    display: inline-block;
+    font-size: 400px;
+    vertical-align: middle;
   }
-
-  &__price{
+  &__value {
+    padding: 0;
+    color: #19c0f5;
+    display: inline-block;
+    vertical-align: middle;
 
   }
 

@@ -1,9 +1,9 @@
-import {Card} from "../components/card/card";
-import Controls from "../components/controls/controls";
+import React from "react";
+import {Game} from "../components/game/game";
 
 
 export default function Home() {
-  return (<Card/>);
+  return (<Game/>);
 }
 
 

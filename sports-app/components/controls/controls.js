@@ -3,16 +3,17 @@ import {buttons, onClickObject} from "../../constants/constants";
 export default function Controls({className, onClickObject}) {
 
     return (
-        <div className={className}>
-            {buttonsList(className, onClickObject)}
+        <div className={`${className? `${className}__controls`:""} controls `}>
+            <div className={`controls__${Object.keys(buttons)[0]}`}>{buttons.title}</div>
+            {buttonsList()}
         </div>
     )
 
 }
 
-function buttonsList(className) {
-    return buttons.map(({icons, text, modifier}, index) => {
+function buttonsList() {
+    return buttons.buttons.map(({icons, text, modifier}, index) => {
         return <button key={index} onClick={onClickObject[modifier]}
-                    className={`${className ? "__button" : ""} ${modifier ? `button_${modifier}` : ""}`}>{text}</button>;
+                    className={`controls__button ${modifier ? `button_${modifier}` : ""}`}>{text}</button>;
     })
 }

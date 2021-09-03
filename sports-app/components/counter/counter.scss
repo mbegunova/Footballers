@@ -1,0 +1,42 @@
+.counter {
+  font-family: Arial Narrow, sans-serif;
+  font-size: 1px;
+  line-height: 1.1px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(45, 44, 139);
+  height: 69px;
+  position: relative;
+  width: 1600px;
+  z-index: 2;
+
+
+  &__tries, &__record, &__count {
+    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 1px;
+    height: 28px;
+    line-height: 1.108px;
+    width: 489.922px;
+    margin-left: 100px;
+  }
+
+  &__value, &__text {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 24.3821px;
+    height: 28px;
+    line-height: 28.0394px;
+    vertical-align: middle;
+  }
+
+  &__text {
+    margin: 0 3px 0 0;
+    width: 91.2656px;
+  }
+
+  &__value {
+    width: 15.4219px;
+  }
+}

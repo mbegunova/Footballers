@@ -1,0 +1,57 @@
+.game {
+  background-color: rgb(243, 246, 247);
+  color: rgb(0, 0, 0);
+  width: 1600px;
+  height: 850px;
+  font-family: Arial Narrow, sans-serif;
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+  white-space: nowrap;
+
+  &__person {
+    &_left {
+      position: absolute;
+      left: 0;
+      background-color: rgb(243, 246, 247);
+      border-left-color: rgb(0, 0, 0);
+      border-left-style: none;
+      border-left-width: 0;
+      vertical-align: top;
+
+      .person__question {
+        display: none;
+      }
+    }
+
+    &_right {
+      left: 800px;
+      background-color: rgb(25, 192, 245);
+      vertical-align: top;
+      width: 800px;
+
+      .person__name{
+        color: white;
+      }
+
+      .person__question {
+        z-index: 5;
+        margin-top: 300px;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 137.34px;
+        right: 200px;
+        font-size: 502.74px;
+        color: rgba(243, 246, 247, .63473);
+        text-shadow: 0 0 12px hsl(0deg 0% 100% / 9%);
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__controls {
+    margin-left: 850px;
+  }
+
+}
