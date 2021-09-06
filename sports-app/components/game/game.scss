@@ -10,6 +10,7 @@
   white-space: nowrap;
 
   &__person {
+
     &_red{
       background-color: #c70000;
     }
@@ -61,3 +62,18 @@
     margin-left: 850px;
   }
 }
+
+
+.swipe-enter .game__person {
+    transform: translateX(0%);
+}
+  .swipe-enter-active .game__person {
+      transform: translateX(-100%);
+    transition: transform .5s;
+  }
+
+
+
+
+
+
