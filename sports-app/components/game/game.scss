@@ -1,79 +1,117 @@
-.game {
-  background-color: rgb(243, 246, 247);
-  color: rgb(0, 0, 0);
-  width: 1600px;
-  height: 900px;
-  font-family: Arial Narrow, sans-serif;
-  font-size: 0;
-  line-height: 0;
-  position: relative;
-  white-space: nowrap;
 
-  &__person {
+  .game {
+    background-color: rgb(243, 246, 247);
+    color: rgb(0, 0, 0);
+    width: 1600px;
+    height: 900px;
+    font-family: Arial Narrow, sans-serif;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
 
-    &_red{
-      background-color: #c70000;
-    }
-    &_green{
-      background-color: #02ac02;
-    }
-    &_none{
-      background-color: rgb(25, 192, 245);
-    }
+    &__person {
+      z-index: 5;
+      position: relative;
 
-    &_left {
-      background-color: rgb(243, 246, 247);
-      position: absolute;
-      left: 0;
-      border-left-color: rgb(0, 0, 0);
-      border-left-style: none;
-      border-left-width: 0;
-      vertical-align: top;
-
-    }
-
-    &_right {
-      left: 800px;
-      vertical-align: top;
-      width: 800px;
-
-      .person__name{
-        color: white;
+      &_red {
+        background-color: #c70000;
       }
 
-      .person__question {
-        z-index: 5;
-        margin-top: 300px;
-        width: 100px;
-        height: 100px;
+      &_green {
+        background-color: #02ac02;
+      }
+
+      &_none {
+        background-color: rgb(25, 192, 245);
+      }
+
+      &_left {
+        transform: translateX(0%);
+        background-color: rgb(243, 246, 247);
         position: absolute;
-        top: 137.34px;
-        right: 200px;
-        font-size: 502.74px;
-        color: rgba(243, 246, 247, .63473);
-        text-shadow: 0 0 12px hsl(0deg 0% 100% / 9%);
-        pointer-events: none;
+        border-left-color: rgb(0, 0, 0);
+        border-left-style: none;
+        border-left-width: 0;
+        vertical-align: top;
+
+      }
+
+      &_right {
+        vertical-align: top;
+        width: 800px;
+
+        .person__name {
+          color: white;
+        }
+
+        .person__question {
+          z-index: 5;
+          margin-top: 300px;
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          top: 137.34px;
+          right: 200px;
+          font-size: 502.74px;
+          color: rgba(243, 246, 247, .63473);
+          text-shadow: 0 0 12px hsl(0deg 0% 100% / 9%);
+          pointer-events: none;
+        }
       }
     }
 
+    &__controls {
+      z-index: 15;
+      margin-left: 850px;
+    }
   }
 
-  &__controls {
-    margin-left: 850px;
-  }
+
+$timeTransform: .5s;
+$timeSwipeState: 1s;
+
+//Стандарт
+.game__person_right {
+  transform: translateX(100%);
 }
 
 
-.swipe-enter .game__person {
-    transform: translateX(0%);
+//Анимация движения
+.game__person_left {
+  z-index: 10;
+  transform: translateX(0%);
+  transition: transform $timeTransform ease-in-out;
 }
-  .swipe-enter-active .game__person {
-      transform: translateX(-100%);
-    transition: transform .5s;
-  }
+
+.item-exit-active {
+  z-index: 10;
+  transform: translateX(-100%);
+  transition: transform $timeTransform ease-in-out;
+}
+
+.item-enter {
+  transform: translateX(200%);
+}
+
+.item-enter-active {
+  z-index: 10;
+  transform: translateX(100%);
+  transition: transform $timeTransform ease-in-out;
+}
 
 
-
-
-
-
+.component-enter {
+  transform: translateX(1800px);
+}
+.component-enter-active,.rules-start, .rules-end{
+  transform: translateX(0%);
+  transition: transform $timeSwipeState ease-in-out;
+}
+.component-exit-active {
+    transform: translateX(-100%);
+    transition: transform $timeSwipeState ease-in-out;
+}

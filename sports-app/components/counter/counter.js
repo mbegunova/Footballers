@@ -12,8 +12,7 @@ export default function Counter({className, resultObj}) {
     )
 }
 
-function GetCounterItem(resultObj, isRecord = false, currentScore) {
-    if (isRecord) resultObj.value = localStorage.getItem('record') ?? currentScore;
+function GetCounterItem(resultObj) {
     return (
         <>
             <div className={"counter__text"}>{resultObj.text}</div>

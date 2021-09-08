@@ -3,32 +3,45 @@ import {Game} from "../components/game/game";
 import {shuffle} from "../utils/helper";
 import {persons} from "../constants/footballers";
 import {Rules} from "../components/rules/rules";
-import {resultObject} from "../constants/constants";
+import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 
 export default function Home() {
-    const footballersArray = shuffle(persons)
+    const [footballersArray, setArray] = useState(persons);
     const [state, setState] = useState("rules")
     const [points, setPoints] = useState(0);
 
+    return (
+        GetCurrentComponent(footballersArray, setArray, state, setState, points, setPoints)
+    )
+}
 
+function GetCurrentComponent(footballersArray, setArray, state, setState, points, setPoints) {
+    let element;
     switch (state) {
         case "rules":
-            return <Rules isStartPage={true} onClick={() => setState("game")}/>;
+            element = <Rules isStartPage={true} isSwiping={false} onClick={() => {
+                setState("game");
+            }}/>;
+            break;
         case "game" :
-            return (<Game resultObject={resultObject} footballersArray={footballersArray} theEndOfGame={(val) => {
-                debugger
+            element = <Game footballersArray={footballersArray} theEndOfGame={(val) => {
                 setPoints(val);
                 setState("result");
-                localStorage.setItem('record', val);
-            }}/>);
+                if ((localStorage.getItem('record') || 0) < val)
+                    localStorage.setItem('record', val);
+            }}/>;
+            break;
         case "result":
-            return <Rules isStartPage={false} value={points} onClick={() => {
+            element = <Rules isStartPage={false} isSwiping={true} value={points} onClick={() => {
+                const arr = shuffle(persons);
+                setArray(arr);
+                debugger
                 setState("game");
             }
             }/>;
+            break;
     }
+    return element;
 }
-
-
 

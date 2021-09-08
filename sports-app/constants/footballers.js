@@ -1,4 +1,5 @@
 export const person = {
+    index: 0,
     name: {
         'person-name': "Андрей Шевченко",
     },
@@ -16,6 +17,7 @@ export const person = {
 
 export const persons = [
     {
+        index: 0,
         name: {
             'person-name': "Андрей Шевченко",
         },
@@ -30,6 +32,7 @@ export const persons = [
         },
     },
     {
+        index: 1,
         name: {
             'person-name': "Килиан Мбаппе",
         },
@@ -44,6 +47,7 @@ export const persons = [
         },
     },
     {
+        index: 2,
         name: {
             'person-name': "Джейдон Санчо",
         },
@@ -58,6 +62,7 @@ export const persons = [
         },
     },
     {
+        index: 3,
         name: {
             'person-name': "Бруну Фернандеш",
         },
@@ -72,6 +77,7 @@ export const persons = [
         },
     },
     {
+        index: 4,
         name: {
             'person-name': "Джек Грилиш",
         },
@@ -86,6 +92,7 @@ export const persons = [
         },
     },
     {
+        index: 5,
         name: {
             'person-name': "Флориан Вирц",
         },
@@ -100,6 +107,7 @@ export const persons = [
         },
     },
     {
+        index: 6,
         name: {
             'person-name': "Ваут Вегхорст",
         },
@@ -114,6 +122,7 @@ export const persons = [
         },
     },
     {
+        index: 7,
         name: {
             'person-name': "Пётр Зелиньский",
         },

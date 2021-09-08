@@ -23,7 +23,7 @@
     font-stretch: ultra-condensed;
   }
 
-  &__title-value{
+  &__title-value {
     position: relative;
   }
 
@@ -64,7 +64,7 @@
     text-decoration: none;
     text-align: center;
 
-    &:hover{
+    &:hover {
       background-color: #0b83a3;
     }
 
@@ -72,3 +72,69 @@
 
 
 }
+
+$mountTime: .5s;
+$delayTime: .3s;
+
+.rules-mount-enter {
+  .rules__title {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  .rules__image {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+  .rules__button, .rules__text {
+    opacity: 0;
+  }
+}
+
+.rules-mount-enter-active, .rules-mount-exit {
+  .rules__button, .rules__image, .rules__text, .rules__title {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.rules-mount-enter-active {
+  .rules__button, .rules__image, .rules__text, .rules__title {
+    transition: opacity $mountTime, transform ease-in-out $mountTime;
+  }
+  .rules__text {
+    transition-delay: opacity $delayTime transform $delayTime;
+  }
+  .rules__button {
+    transition-delay: opacity $delayTime*2 transform $delayTime*2;
+  }
+}
+
+.rules-mount-exit-active {
+  .rules__title {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  .rules__image {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+
+  .rules__text, .rules__button {
+    opacity: 0;
+  }
+}
+
+.rules-mount-exit-active {
+  .rules__button, .rules__image, .rules__text, .rules__title {
+    transition: opacity $mountTime, transform ease-out $mountTime;
+  }
+
+  .rules__text {
+    transition-delay: opacity $delayTime transform $delayTime;
+  }
+
+  .rules__button {
+    transition-delay: opacity $delayTime*2 transform $delayTime*2;
+  }
+}
+
